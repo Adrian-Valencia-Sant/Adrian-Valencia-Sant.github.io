@@ -2,7 +2,6 @@
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: xx-large;
 	font-weight: bold;
-	background-color: #d64161;
 	border-radius: 4px;
 	padding: 10px;
 	text-align: center;
@@ -43,7 +42,10 @@ p {
 }
 
 body {
-    background-color: #d64161;
+	background-image: url("Images/nature.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 img {
