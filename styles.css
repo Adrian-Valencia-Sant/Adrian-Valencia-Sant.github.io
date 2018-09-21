@@ -46,6 +46,8 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	height: 1000px;
+	overflow: scroll;
 }
 
 img {
@@ -81,4 +83,20 @@ img {
 	background: aqua;
 	border: 1px solid red;
 	color: red;
+}
+
+#schedule th {
+	font-size: 12;
+	border: 5px solid #eee;
+	color: aqua;
+	opacity: 0.7;
+	padding-bottom: 12px;
+	padding-top: 12px;
+	position: relative;
+}
+
+.table {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
 }
