@@ -1,6 +1,15 @@
-.name {
-    color: black;
-    font-family: Times;
-    font-size: 30;
-    font-weight: bold;
+h1 {
+  position: left;
+  top: 0px;
 }
+
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+footer {
+  position: right;
+  bottom: 0px;
+}
+
