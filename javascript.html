@@ -3,12 +3,78 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Adrian Valencia Santos</title>
+    <title>Javascript Practice</title>
 </head>
 
 <body>
-    <button type="button" onclick="document.getElementById('ptext').innerHTML = Date()" >Click me</button>
-    <p id="ptext">This is about to change</p>
+    <button id="textupdate" type="button" onclick=introbutton>Free joke!</button>
+    <button id="name" type="button" onclick=myName()>My name!</button>
+    <button id="pic-button" type="button" onclick=changePic()>Click me!</button>
+    <button id="showImg" type="button" onclick=showImg>Show Image</button>
+    <button id="hideImg" type="button" onclick=hideImg>Hide Image!</button>
+</body>
+
+<body>
+
+    <p> </p>
+    <img id="mc-image" src="" alt="" width="600" height="480">
+
+    <script>
+        var myname = "Adrian" + " " + "Valencia" + " " + "Santos";
+        var pic = document.getElementById('mc-image');
+        var state = "minecraft";
+
+        function showImg()
+        {
+            pic.style.display = "block";
+            pic.src = "/images/minecraft-header.png";
+            pic.alt = "A Minecraft header.";
+        }
+        
+        function hideImg()
+        {
+            pic.style.display = "none";
+            pic.src = "";
+            pic.alt = "";
+        }
+        
+        function myName()
+        {
+            document.getElementById('name').innerHTML = "Adrian" + " " + "Valencia" + " " + "Santos";
+        }
+
+        function changePic()
+        {
+
+            if (state == "minecraft")
+            {
+                pic.src = "/images/minecraft-header.png";
+                pic.alt = "A Minecraft header.";
+                document.getElementById('pic-button').innerHTML = "Rainbow Cow!";
+                state = "cowonrainbow";
+            }
+            else if (state == "cowonrainbow")
+            {
+                pic.src = "/images/rainbow-cow.jpg";
+                pic.alt = "Rainbow cow.";
+                document.getElementById('pic-button').innerHTML = "Blocky Game Man!";
+                state = "minecraft";
+
+            }
+        }
+
+        var button2 = document.createElement('button');
+        var buttontext2 = document.createTextNode('Yay!');
+        button2.appendChild(buttontext2);
+        button2.setAttribute("onclick", "changePic()");
+        button2.setAttribute("id", "bubblegum");
+        document.body.appendChild(button2);
+        
+        
+        
+        
+    </script>
+
 </body>
 
 </html>
