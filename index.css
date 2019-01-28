@@ -30,3 +30,9 @@ footer {
 .presume {
   text-align: left;
 }
+
+.tbody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
