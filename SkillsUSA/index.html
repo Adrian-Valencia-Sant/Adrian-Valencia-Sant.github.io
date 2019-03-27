@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SkillsUSA | Home</title>
+    <link rel="stylesheet" type="text/css" href="/SkillsUSA/index.css">
+</head>
+<!-- Team ID: 8466 -->
+<!-- Team ID: 8466 -->
+<!-- Team ID: 8466 -->
+<!-- Team ID: 8466 -->
+<!-- Team ID: 8466 -->
+<!-- Team ID: 8466 -->
+<!-- Team ID: 8466 -->
+<!-- Team ID: 8466 -->
+<body>
+    <div id="container">
+
+        <div id="header">
+            <table>
+                <tr>
+                    <th>
+                        <h1>SkillsUSA</h1>
+                    </th>
+                    <th>
+                        <button id="b1" onclick=bclick(1)>Make Jimbo Happy</button>
+                    </th>
+                    <th>
+                        <button id="b2" onclick=bclick(2)>Make Jimbo Sad</button>
+                    </th>
+                    <th>
+                        <button id="b3" onclick=bclick(3)>Make Pancho Happy</button>
+                    </th>
+                    <th>
+                        <button id="b4" onclick=bclick(4)>Make Pancho Sad</button>
+                    </th>
+                    <th>
+                        <button id="b5" onclick=changePic()>Magic! (Spam Click)</button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <div id="leftpane">
+            <img id="pic1" src="" alt="" />
+        </div>
+
+        <div id="rightpane">
+            <img id="pic2" src="" alt="" />
+        </div>
+
+    </div>
+    <script>
+        var pic1 = document.getElementById('pic1');
+        var pic2 = document.getElementById('pic2');
+        var state = "happyjimbo";
+
+        function intro() {
+            pic1.src = "/SkillsUSA/img/sadly.png";
+            pic1.alt = "Depressed Jimbo";
+            pic2.src = "/SkillsUSA/img/panchosadly.png";
+            pic2.alt = "Sad Pancho";
+        }
+
+        function changePic() {
+
+            if (state == "happyjimbo") {
+                pic1.src = "/SkillsUSA/img/smiley.png";
+                pic1.alt = "Happy Jimbo";
+                state = "sadjimbo";
+            }
+            else if (state == "sadjimbo") {
+                pic1.src = "/SkillsUSA/img/sadly.png";
+                pic1.alt = "Sad Jimbo";
+                state = "happypancho";
+
+            }
+            else if (state == "happypancho") {
+                pic2.src = "/SkillsUSA/img/panchosmiley.png";
+                pic2.alt = "Happy Pancho";
+                state = "sadpancho";
+
+            }
+            else if (state == "sadpancho") {
+                pic2.src = "/SkillsUSA/img/panchosadly.png";
+                pic2.alt = "Sad Pancho";
+                state = "happyjimbo";
+
+            }
+        }
+
+        function bclick(button) {
+            if (button == 1) {
+                pic1.src = "/SkillsUSA/img/smiley.png";
+                pic1.alt = "Happy Jimbo";
+            }
+            else if (button == 2) {
+                pic1.src = "/SkillsUSA/img/sadly.png";
+                pic1.alt = "Sad Jimbo";
+            }
+            else if (button == 3) {
+                pic2.src = "/SkillsUSA/img/panchosmiley.png";
+                pic2.alt = "Happy Pancho";
+            }
+            else if (button == 4) {
+                pic2.src = "/SkillsUSA/img/panchosadly.png";
+                pic2.alt = "Sad Pancho";
+            }
+        }
+
+        intro();
+    </script>
+</body>
+
+
+
+
+</html>

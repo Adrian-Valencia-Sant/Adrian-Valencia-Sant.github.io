@@ -24,37 +24,31 @@
         var pic = document.getElementById('mc-image');
         var state = "minecraft";
 
-        function showImg()
-        {
+        function showImg() {
             pic.style.display = "block";
             pic.src = "/images/minecraft-header.png";
             pic.alt = "A Minecraft header.";
         }
-        
-        function hideImg()
-        {
+
+        function hideImg() {
             pic.style.display = "none";
             pic.src = "";
             pic.alt = "";
         }
-        
-        function myName()
-        {
+
+        function myName() {
             document.getElementById('name').innerHTML = "Adrian" + " " + "Valencia" + " " + "Santos";
         }
 
-        function changePic()
-        {
+        function changePic() {
 
-            if (state == "minecraft")
-            {
+            if (state == "minecraft") {
                 pic.src = "/images/minecraft-header.png";
                 pic.alt = "A Minecraft header.";
                 document.getElementById('pic-button').innerHTML = "Rainbow Cow!";
                 state = "cowonrainbow";
             }
-            else if (state == "cowonrainbow")
-            {
+            else if (state == "cowonrainbow") {
                 pic.src = "/images/rainbow-cow.jpg";
                 pic.alt = "Rainbow cow.";
                 document.getElementById('pic-button').innerHTML = "Blocky Game Man!";
@@ -66,13 +60,9 @@
         var button2 = document.createElement('button');
         var buttontext2 = document.createTextNode('Yay!');
         button2.appendChild(buttontext2);
-        button2.setAttribute("onclick", "changePic()"); 
+        button2.setAttribute("onclick", "changePic()");
         button2.setAttribute("id", "bubblegum");
         document.body.appendChild(button2);
-        
-        
-        
-        
     </script>
 
 </body>
